@@ -3,7 +3,9 @@
 names = [] 
 
 if ARGV[0] == nil:
-  puts "You didn't provide a file name!"
+  puts "You didn't provide a file name!\n" +
+        "USAGE: ruby name-hat.rb <file name>"
+  Process.exit
 else
   names_file = File.new(ARGV[0], "r")  
   names_file.each { |line| names << line.strip }
